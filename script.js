@@ -1,0 +1,1 @@
+document.getElementById('motd').innerHTML = 'A big brain club that makes robots'
