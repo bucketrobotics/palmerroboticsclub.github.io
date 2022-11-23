@@ -1,1 +1,0 @@
-document.getElementById('motd').innerHTML = '"We make robots"'
