@@ -1,3 +1,6 @@
+nav {
+    position: fixed;
+}
 #banner {
     background-image: url('images/banner.jpg');
 }
