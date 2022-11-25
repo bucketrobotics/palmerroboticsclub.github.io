@@ -6,10 +6,11 @@ import { IndexComponent } from './index/index.component';
 import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
-  { path: "", component: IndexComponent },
-  { path: "news", component: NewsComponent},
-  { path: "contact", component: ContactComponent},
-  { path: "about", component: AboutComponent}
+  { path: "home", component: IndexComponent },
+  { path: "news", component: NewsComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "about", component: AboutComponent },
+  { path: "**", redirectTo: "home" }
 ];
 
 @NgModule({
