@@ -6,15 +6,17 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  @ViewChild("map") mapEl: any;
   map: any;
 
-  onNgViewInit() { // @ts-ignore
+  ngAfterViewInit() {
+    // @ts-ignore
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2FpbGJvYXRwb28iLCJhIjoiY2xheDN5MWwwMDVkeTQwbXVvaDZqZzRqNiJ9.AgXrDuewkhFQc7e3fU--DQ';
+    // @ts-ignore
     this.map = new mapboxgl.Map({
-      container: this.mapEl.nativeElement, // container ID
+      container: "about-map", // container ID
       style: 'mapbox://styles/mapbox/streets-v12', // style URL
-      center: [49.15296, -123.12896], // starting position [lng, lat]
-      zoom: 17 // starting zoom
-  });
+      center: [-123.12896, 49.15296], // starting position [lng, lat]
+      zoom: 15 // starting zoom
+    });
   }
 }
