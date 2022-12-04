@@ -23,7 +23,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build -- --output-path _site
-    - run: firebase target:apply hosting app bucketrobotics-70f4c
     - uses: FirebaseExtended/action-hosting-deploy@v0
       with:
         repoToken: "${{ secrets.GITHUB_TOKEN }}"
