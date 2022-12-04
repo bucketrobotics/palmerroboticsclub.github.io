@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
 
+## Getting the code
+Prerequites:
+ - Install the Angular CLI. Refer to the [Angular Setup Documentation](https://angular.io/guide/setup-local) for installtion instructions;
+
+First clone this repository. Then run `npm install` to install required dependencies.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -9,10 +15,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `./build.sh` to build the project and deploy to GitHub Pages. Please note that all your uncomitted changes will be removed.
 
 ## Running unit tests
 
