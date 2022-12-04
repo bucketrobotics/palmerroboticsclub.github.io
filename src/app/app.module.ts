@@ -7,6 +7,8 @@ import { IndexComponent } from './index/index.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NewsComponent } from './news/news.component';
+import { NewsArticleComponent } from './news-article/news-article.component';
+import { NewsListComponent } from './news-list/news-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { NewsComponent } from './news/news.component';
     IndexComponent,
     AboutComponent,
     ContactComponent,
-    NewsComponent
+    NewsComponent,
+    NewsArticleComponent,
+    NewsListComponent
   ],
   imports: [
     BrowserModule,

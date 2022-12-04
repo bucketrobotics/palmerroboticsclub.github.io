@@ -1,0 +1,10 @@
+<div class="fluid-container">
+    <div class="p-5" *ngFor="let article of articles">
+        <div class="news-article">
+            <div class="text-center fs-1 mb-5">
+                <a routerLink="/news/article/{{article.id}}" routerLinkActive="active" ariaCurrentWhenActive="page">{{article.name}}</a>
+            </div>
+            <div class="fs-4 m-5">{{article.shortDescription}}</div>
+        </div>
+    </div>
+</div>
