@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "live": "bucketrobotics-70f4c",
+    "default": "bucketrobotics-70f4c"
+  },
+  "targets": {
+    "bucketrobotics-70f4c": {
+      "hosting": {
+        "app": [
+          "bucketrobotics-70f4c"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
