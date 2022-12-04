@@ -5,6 +5,7 @@ name: Build Angular App and Deploy to Pages
 
 permissions:
   id-token: "write"
+  pages: "write"
 
 on:
   push:
