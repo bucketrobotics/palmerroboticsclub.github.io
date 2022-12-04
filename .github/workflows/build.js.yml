@@ -26,8 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install -g @angular/cli
-    - run: npm install
+    - run: npm ci
     - run: ng build --output-path _site
     - run: cp _site/index.html _site/404.html
     - name: Upload GitHub Pages artifact
