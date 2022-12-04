@@ -1,11 +1,7 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Build Angular App and Deploy to Pages
-
-permissions:
-  id-token: "write"
-  pages: "write"
+name: Build Angular App and Deploy to Firebase Hosting
 
 on:
   push:
@@ -27,12 +23,10 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build -- --output-path _site
-    - run: cp _site/index.html _site/404.html
-    - name: Setup Pages
-      uses: actions/configure-pages@v2
-    - name: Upload GitHub Pages artifact
-      uses: actions/upload-pages-artifact@v1.0.5
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
-    
+    - uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: "${{ secrets.GITHUB_TOKEN }}"
+        firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUCKETROBOTICS }}"
+        expires: 30d
+        projectId: bucketrobotics-70f4c
+
