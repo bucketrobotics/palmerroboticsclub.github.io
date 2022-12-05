@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import news from "../../assets/news/news";
-import type { Article } from "../../assets/news/news";
+import { DocumentData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-news-article',
@@ -9,7 +9,7 @@ import type { Article } from "../../assets/news/news";
   styleUrls: ['./news-article.component.css']
 })
 export class NewsArticleComponent {
-  article!: Article;
+  article!: DocumentData;
 
   constructor(private activatedRoute: ActivatedRoute) {}
 

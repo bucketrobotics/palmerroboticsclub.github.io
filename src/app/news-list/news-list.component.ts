@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import news from "../../assets/news/news";
-import type { Article } from "../../assets/news/news";
+import { Component } from '@angular/core';
+import { Firestore, collectionData, collection, DocumentData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-news-list',
@@ -8,5 +8,9 @@ import type { Article } from "../../assets/news/news";
   styleUrls: ['./news-list.component.css']
 })
 export class NewsListComponent {
-  articles: Article[] = news;
+  articles: Observable<DocumentData[]>;
+  constructor(firestore: Firestore) {
+    const col = collection(firestore, 'news-articles');
+    this.articles = collectionData(col, {"idField": "id"});
+  }
 }
