@@ -10,11 +10,14 @@ import { Observable } from 'rxjs';
 })
 export class NewsArticleComponent {
   article!: DocumentData;
+  route: ActivatedRoute;
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(activatedRoute: ActivatedRoute) {
+    this.route = activatedRoute
+  }
 
   ngOnInit() {
-    this.activatedRoute.data.subscribe(({ article }) => {
+    this.route.data.subscribe(({ article }) => {
       this.article = article;
     })
   }

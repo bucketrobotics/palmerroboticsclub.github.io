@@ -1,34 +1,97 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { CurrentSponsorsComponent } from './current-sponsors/current-sponsors.component';
+import { EventGeneralComponent } from './event-general/event-general.component';
+import { EventOutreachComponent } from './event-outreach/event-outreach.component';
+import { FtcComponent } from './ftc/ftc.component';
 import { IndexComponent } from './index/index.component';
 import { NewsArticleResolver } from './news-article.resolver';
 import { NewsArticleComponent } from './news-article/news-article.component';
 import { NewsListComponent } from './news-list/news-list.component';
-import { NewsComponent } from './news/news.component';
+import { SupportUsComponent } from './support-us/support-us.component';
+import { TeamGalleryComponent } from './team-gallery/team-gallery.component';
+import { TeamMembersComponent } from './team-members/team-members.component';
 
 const routes: Routes = [
   { path: "home", component: IndexComponent },
   {
-    path: "news", component: NewsComponent,
+    path: "team",
     children: [
       {
-        path: "",
-        component: NewsListComponent
+        path: "members",
+        component: TeamMembersComponent
       },
       {
-        path: "article/:id",
-        component: NewsArticleComponent,
-        resolve: {
-          article: NewsArticleResolver
+        path: "gallery",
+        component: TeamGalleryComponent
+      }
+    ]
+  },
+  {
+    path: "support-us",
+    component: SupportUsComponent
+  },
+  {
+    path: "current-sponsors",
+    component: CurrentSponsorsComponent
+  },
+  {
+    path: "ftc",
+    component: FtcComponent
+  },
+  {
+    path: "events",
+    children: [
+      {
+        path: "outreach", component: EventOutreachComponent,
+        children: [
+          {
+            path: "",
+            component: NewsListComponent
+          },
+          {
+            path: "article/:id",
+            component: NewsArticleComponent,
+            resolve: {
+              article: NewsArticleResolver
+            },
+            data: {
+              type: "outreach"
+            }
+          },
+          { path: "**", redirectTo: "" }
+        ],
+        data: {
+          type: "outreach"
         }
       },
-      { path: "**", redirectTo: "" }
+      {
+        path: "general", component: EventGeneralComponent,
+        children: [
+          {
+            path: "",
+            component: NewsListComponent
+          },
+          {
+            path: "article/:id",
+            component: NewsArticleComponent,
+            resolve: {
+              article: NewsArticleResolver
+            },
+            data: {
+              type: "general"
+            }
+          },
+          { path: "**", redirectTo: "" }
+        ],
+        data: {
+          type: "general"
+        }
+      }
     ]
   },
   { path: "contact", component: ContactComponent },
-  { path: "about", component: AboutComponent },
   { path: "**", redirectTo: "home" }
 ];
 

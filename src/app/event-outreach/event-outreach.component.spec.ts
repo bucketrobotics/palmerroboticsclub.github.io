@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutComponent } from './about.component';
+import { EventOutreachComponent } from './event-outreach.component';
 
-describe('AboutComponent', () => {
-  let component: AboutComponent;
-  let fixture: ComponentFixture<AboutComponent>;
+describe('EventOutreachComponent', () => {
+  let component: EventOutreachComponent;
+  let fixture: ComponentFixture<EventOutreachComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
+      declarations: [ EventOutreachComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AboutComponent);
+    fixture = TestBed.createComponent(EventOutreachComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
