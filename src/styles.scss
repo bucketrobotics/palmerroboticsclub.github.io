@@ -3,7 +3,8 @@
 @import "../node_modules/bootstrap/scss/variables";
 
 $theme-colors: (
-    primary: $blue-700
+    primary: $blue-700,
+    secondary: $blue-200
 );
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";

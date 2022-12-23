@@ -18,7 +18,10 @@ import { TeamGalleryComponent } from './team-gallery/team-gallery.component';
 
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
+import { GetStorageDownloadURLPipe } from './get-storage-download-url.pipe';
+import { SponsorsListComponent } from './sponsors-list/sponsors-list.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +37,16 @@ import { environment } from '../environments/environment';
     EventOutreachComponent,
     EventGeneralComponent,
     TeamMembersComponent,
-    TeamGalleryComponent
+    TeamGalleryComponent,
+    GetStorageDownloadURLPipe,
+    SponsorsListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent]

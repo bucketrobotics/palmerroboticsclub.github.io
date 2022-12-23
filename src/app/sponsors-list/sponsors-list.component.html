@@ -1,0 +1,5 @@
+<div class="fluid-container d-flex flex-row">
+    <div class="p-5 sponsor text-center" *ngFor="let sponsor of sponsors | async">
+        <img [src]="sponsor['path'] | getStorageDownloadURL | async" class="img-fluid w-100" alt="">
+    </div>
+</div>

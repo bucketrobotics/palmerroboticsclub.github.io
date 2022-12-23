@@ -1,12 +1,104 @@
 <div class="w-100 d-flex align-content-center align-items-center justify-content-center banner">
-    <div class="text-center outline-text banner-text">
-        <div class="fs-1">R. C. Palmer Robotics</div>
-        <p class="fst-italic">{{ motd }}</p>
+    <div class="text-center text-white">
+        <div class="fs-1">Bucket Robotics</div>
+        <p class="fs-4">A high school robotics team with a mission to inspire students to pursue their interests in STEM
+            education.</p>
     </div>
 </div>
 <div class="fluid-container">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="row m-5 p-5">
+        <div class="col-md-12">
+            <div class="fs-2 text-primary">Who are we?</div>
+            <p>We are a robotics team based in Richmond, BC. Our team was founded in 2022 at R.C. Palmer Secondary
+                School with the goal of making STEM education accessible to all students. We strive to create a
+                welcoming environment for all students to learn about engineering and robotics. Regardless of your
+                background, age, or experience, you are welcome to the club.
+                We are passionate about robotics - we love to learn, build and create. We hope to inspire others with
+                the same passion.</p>
+            <img src="/assets/images/home/team.jpg" alt="The team">
+            <a class="link-primary" routerLink="/team/members" routerLinkActive="active"
+                ariaCurrentWhenActive="page">Our Members</a>
+        </div>
+    </div>
+    <div class="row p-5 bg-primary text-white">
+        <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/y5NPp_5KHuk" title="About FIRST Tech Challenge (2021)"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-6 p-5">
+            <div class="fs-2 text-secondary">
+                What we do
+            </div>
+            <p>We compete in the FIRST Tech Challenge - a robotics competition for students all around the world. We
+                learn how to build, design, and program robots to compete in an engineering challenge against other
+                competing teams.</p>
+            <a class="link-secondary" routerLink="/ftc" routerLinkActive="active" ariaCurrentWhenActive="page">Learn
+                More</a>
+        </div>
+    </div>
+    <div class="row p-5">
+        <div class="col-sm-3">
+            <img src="/assets/images/home/outreach.png" alt="">
+        </div>
+        <div class="col-sm-3">
+            <div class="fs-3 text-primary">Outreach</div>
+            <p>Our goal is to promote STEM education and interest. Find out how we are accomplishing this mission.</p>
+            <a class="link-secondary" routerLink="/events/outreach" routerLinkActive="active"
+                ariaCurrentWhenActive="page">Learn
+                More</a>
+        </div>
+        <div class="col-sm-3">
+            <img src="/assets/images/home/events.png" alt="">
+        </div>
+        <div class="col-sm-3">
+            <div class="fs-3 text-primary">Events History</div>
+            <p>We are all about having fun with the community! Check out some of the cool events we have took part in or
+                organized.</p>
+            <a class="link-primary" routerLink="/events/general" routerLinkActive="active"
+                ariaCurrentWhenActive="page">Learn
+                More</a>
+        </div>
+    </div>
+    <div class="row p-5 bg-secondary">
+        <div class="col-md-6">
+            <img src="/assets/images/home/donate.png" alt="">
+        </div>
+        <div class="col-md-6 p-5">
+            <div class="fs-3 text-primary">We need your help!</div>
+            <p>We wouldn't be able to run this club without the donations and support from generous patrons, sponsors,
+                and mentors. Help us achieve our robotics dreams!</p>
+            <a class="link-primary" routerLink="/support-us" routerLinkActive="active"
+                ariaCurrentWhenActive="page">Support Us</a>
+        </div>
+    </div>
+    <div class="row p-5 bg-primary text-white">
+        <div class="col-sm-6">
+            <div class="fs-2">Join Us!</div>
+        </div>
+        <div class="col-sm-6">
+            <p>Anyone is welcome to join the team - regardless of experience!<br>
+                <br>
+                Starting from semester 2 of the 2022-2023 school year, we will be running as a credit course; students
+                from different schools can join us. For more details, contact us.
+            </p>
+            <a class="link-secondary" routerLink="/contact" routerLinkActive="active"
+                ariaCurrentWhenActive="page">Contact Us</a>
+        </div>
+    </div>
+    <div class="row p-5">
+        <div class="col-12">
+            <div class="text-center">
+                <div class="fs-1 text-primary">Sponsors</div>
+                <div class="fs-4 ms-5 me-5 mt-3">
+                    We cannot express how grateful we are to our sponsors. They are the reason Bucket Robotics is able
+                    continue to run and operate. We thank each and every sponsor!
+                </div>
+            </div>
+            <app-sponsors-list></app-sponsors-list>
+        </div>
+    </div>
 </div>

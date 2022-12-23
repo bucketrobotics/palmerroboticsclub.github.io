@@ -4,11 +4,11 @@ import { getDownloadURL } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-current-sponsors',
-  templateUrl: './current-sponsors.component.html',
-  styleUrls: ['./current-sponsors.component.scss']
+  selector: 'app-sponsors-list',
+  templateUrl: './sponsors-list.component.html',
+  styleUrls: ['./sponsors-list.component.scss']
 })
-export class CurrentSponsorsComponent {
+export class SponsorsListComponent {
   sponsors: Observable<DocumentData[]>;
 
   constructor(firestore: Firestore) {
