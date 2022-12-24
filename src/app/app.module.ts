@@ -7,7 +7,6 @@ import { IndexComponent } from './index/index.component';
 import { ContactComponent } from './contact/contact.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
 import { NewsListComponent } from './news-list/news-list.component';
-import { MembersComponent } from './members/members.component';
 import { SupportUsComponent } from './support-us/support-us.component';
 import { CurrentSponsorsComponent } from './current-sponsors/current-sponsors.component';
 import { FtcComponent } from './ftc/ftc.component';
@@ -30,7 +29,6 @@ import { SponsorsListComponent } from './sponsors-list/sponsors-list.component';
     ContactComponent,
     NewsArticleComponent,
     NewsListComponent,
-    MembersComponent,
     SupportUsComponent,
     CurrentSponsorsComponent,
     FtcComponent,
