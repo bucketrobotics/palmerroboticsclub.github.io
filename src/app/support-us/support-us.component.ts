@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./support-us.component.scss']
 })
 export class SupportUsComponent {
-
+  donateUrl = "dontating/Donating.pdf"
 }
