@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Firestore, collectionData, collection, DocumentData } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, DocumentData, orderBy } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
-import { query, where } from '@firebase/firestore';
+import { query } from '@firebase/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,14 +10,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./news-list.component.scss']
 })
 export class NewsListComponent {
-  newsType!: string;
-  route: ActivatedRoute
   articles: Observable<DocumentData[]>;
 
   constructor(firestore: Firestore, route: ActivatedRoute) {
-    this.route = route;
     const col = collection(firestore, 'news-articles');
-    const q = query(col, where("type", "==", route.snapshot.data["type"]));
+    const q = query(col, orderBy("date", "desc"));
     this.articles = collectionData(q, {"idField": "id"});
   }
 }

@@ -44,51 +44,20 @@ const routes: Routes = [
     path: "events",
     children: [
       {
-        path: "outreach", component: EventOutreachComponent,
-        children: [
-          {
-            path: "",
-            component: NewsListComponent
-          },
-          {
-            path: "article/:id",
-            component: NewsArticleComponent,
-            resolve: {
-              article: NewsArticleResolver
-            },
-            data: {
-              type: "outreach"
-            }
-          },
-          { path: "**", redirectTo: "" }
-        ],
-        data: {
-          type: "outreach"
-        }
+        path: "",
+        component: NewsListComponent
       },
       {
-        path: "general", component: EventGeneralComponent,
-        children: [
-          {
-            path: "",
-            component: NewsListComponent
-          },
-          {
-            path: "article/:id",
-            component: NewsArticleComponent,
-            resolve: {
-              article: NewsArticleResolver
-            },
-            data: {
-              type: "general"
-            }
-          },
-          { path: "**", redirectTo: "" }
-        ],
+        path: "article/:id",
+        component: NewsArticleComponent,
+        resolve: {
+          article: NewsArticleResolver
+        },
         data: {
           type: "general"
         }
-      }
+      },
+      { path: "**", redirectTo: "" }
     ]
   },
   { path: "contact", component: ContactComponent },

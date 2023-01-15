@@ -2,8 +2,9 @@
     <div class="p-5" *ngFor="let article of articles | async">
         <div class="news-article">
             <div class="text-center fs-1 mb-5">
-                <a routerLink="/events/{{route.snapshot.data['type']}}/article/{{article['id']}}" routerLinkActive="active" ariaCurrentWhenActive="page">{{article["title"]}}</a>
+                <a routerLink="/events/article/{{article['id']}}" routerLinkActive="active" ariaCurrentWhenActive="page">{{article["title"]}}</a>
             </div>
+            <div class="fs-6 text-center">{{article["date"].toDate()}}</div>
             <div class="fs-4 m-5">{{article["short-description"]}}</div>
         </div>
     </div>
