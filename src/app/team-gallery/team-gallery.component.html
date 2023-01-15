@@ -1,6 +1,31 @@
 <div class="fluid-container">
     <div class="row p-5">
         <div class="fs-2">Gallery</div>
-        <div class="fs-6">Gallery coming soon... Check back later!</div>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button *ngFor="let image of gallery | async; let i = index" type="button" data-bs-target="#carousel" [attr.data-bs-slide-to]="i" class="active"
+                    aria-current="true" [attr.aria-label]="image['label']"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let image of gallery | async">
+                    <img [src]="image['image'] | getStorageDownloadURL | async" [alt]="image['label']" class="w-100 d-block object-fit-cover">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="fs-2">{{image['label']}}</div>
+                        <div class="fs-6">{{image['date'].toDate().toDateString()}}</div>
+                        <div class="fs-4">{{image['caption']}}</div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 </div>
