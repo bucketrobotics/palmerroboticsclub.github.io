@@ -20,7 +20,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 import { GetStorageDownloadURLPipe } from './get-storage-download-url.pipe';
-import { SponsorsListComponent } from './sponsors-list/sponsors-list.component';
+import { PremiumSponsorsListComponent } from './premium-sponsors-list/premium-sponsors-list.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { SponsorsListComponent } from './sponsors-list/sponsors-list.component';
     TeamMembersComponent,
     TeamGalleryComponent,
     GetStorageDownloadURLPipe,
-    SponsorsListComponent
+    PremiumSponsorsListComponent,
   ],
   imports: [
     BrowserModule,
