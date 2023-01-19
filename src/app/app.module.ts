@@ -21,6 +21,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 import { GetStorageDownloadURLPipe } from './get-storage-download-url.pipe';
 import { PremiumSponsorsListComponent } from './premium-sponsors-list/premium-sponsors-list.component';
+import { PremiumSponsorComponent } from './premium-sponsor/premium-sponsor.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PremiumSponsorsListComponent } from './premium-sponsors-list/premium-sp
     TeamGalleryComponent,
     GetStorageDownloadURLPipe,
     PremiumSponsorsListComponent,
+    PremiumSponsorComponent,
   ],
   imports: [
     BrowserModule,

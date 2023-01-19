@@ -1,0 +1,6 @@
+<div class="p-2 text-center">
+    <div class="ratio ratio-1x1 sponsor-img text-center d-block mx-auto">
+        <img [src]="path | getStorageDownloadURL | async" [alt]="name">
+    </div>
+    <div class="fs-4">{{ name }}</div>
+</div>
