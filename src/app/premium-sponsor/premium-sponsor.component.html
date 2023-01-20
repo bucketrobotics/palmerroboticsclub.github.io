@@ -1,6 +1,14 @@
 <div class="p-2 text-center">
-    <div class="ratio ratio-1x1 sponsor-img text-center d-block mx-auto">
-        <img [src]="path | getStorageDownloadURL | async" [alt]="name">
-    </div>
+    <div *ngIf="url; then showUrl else noUrl"></div>
+    <ng-template #showUrl>
+        <a class="ratio ratio-1x1 sponsor-img text-center d-block mx-auto" [href]="url" target="_blank">
+            <img [src]="path | getStorageDownloadURL | async" [alt]="name">
+        </a>
+    </ng-template>
+    <ng-template #noUrl>
+        <div class="ratio ratio-1x1 sponsor-img text-center d-block mx-auto">
+            <img [src]="path | getStorageDownloadURL | async" [alt]="name">
+        </div>
+    </ng-template>
     <div class="fs-4">{{ name }}</div>
 </div>
