@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
 
 import { NewsListComponent } from './news-list.component';
 import { Firestore } from '@angular/fire/firestore';
+import { ActivatedRoute } from '@angular/router';
 
 const FirestoreStub = {};
 

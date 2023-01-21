@@ -17,7 +17,7 @@ describe('NewsArticleResolver', () => {
     resolver = TestBed.inject(NewsArticleResolver);
   });
 
-  it('should be created', inject([Firestore], (firestore: Firestore) => {
+  it('should be created', () => {
     expect(resolver).toBeTruthy();
-  }));
+  });
 });

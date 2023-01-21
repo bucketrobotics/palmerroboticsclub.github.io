@@ -1,4 +1,5 @@
 import { inject, TestBed } from '@angular/core/testing';
+import { Firestore } from '@angular/fire/firestore';
 
 import { NewsArticleService } from './news-article.service';
 

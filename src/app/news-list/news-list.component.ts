@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class NewsListComponent {
   articles: Observable<DocumentData[]>;
 
-  constructor(firestore: Firestore, route: ActivatedRoute) {
+  constructor(firestore: Firestore) {
     const col = collection(firestore, 'news-articles');
     const q = query(col, orderBy("date", "desc"));
     this.articles = collectionData(q, {"idField": "id"});

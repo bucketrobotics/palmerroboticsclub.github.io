@@ -26,7 +26,7 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
   }
 }
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: "home", component: IndexComponent, title: "Home" },
   {
     path: "team",

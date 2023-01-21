@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { getStorageDownloadURL } from '../get-storage-download-url.pipe';
+import { GetStorageDownloadURLPipe } from '../get-storage-download-url.pipe';
 
 @Component({
   selector: 'app-support-us',

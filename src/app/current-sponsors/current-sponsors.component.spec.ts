@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Firestore } from '@angular/fire/firestore';
 
 import { CurrentSponsorsComponent } from './current-sponsors.component';
+
+const FirestoreStub = {};
 
 describe('CurrentSponsorsComponent', () => {
   let component: CurrentSponsorsComponent;
@@ -8,7 +11,8 @@ describe('CurrentSponsorsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CurrentSponsorsComponent ]
+      declarations: [ CurrentSponsorsComponent ],
+      providers : [{ provide : Firestore, useValue : FirestoreStub }]
     })
     .compileComponents();
 

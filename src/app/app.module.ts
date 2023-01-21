@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
+import { routes, AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { ContactComponent } from './contact/contact.component';
@@ -43,6 +44,7 @@ import { PremiumSponsorComponent } from './premium-sponsor/premium-sponsor.compo
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
