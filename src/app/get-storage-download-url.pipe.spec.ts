@@ -4,13 +4,6 @@ import { inject, TestBed } from '@angular/core/testing';
 import { Storage } from '@angular/fire/storage';
 
 describe('GetStorageDownloadURLPipe', () => {
-  it('create an instance', () => {
-    const pipe = new GetStorageDownloadURLPipe();
-    expect(pipe).toBeTruthy();
-  });
-});
-
-describe('GetStorageDownloadURLPipe', () => {
   beforeEach(() => {
     TestBed
       .configureTestingModule({
