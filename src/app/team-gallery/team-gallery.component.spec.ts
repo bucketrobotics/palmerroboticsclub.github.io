@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TeamGalleryComponent } from './team-gallery.component';
+import { Firestore } from '@angular/fire/firestore';
+
+const FirestoreStub = {}
 
 describe('TeamGalleryComponent', () => {
   let component: TeamGalleryComponent;
@@ -8,7 +11,10 @@ describe('TeamGalleryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TeamGalleryComponent ]
+      declarations: [ TeamGalleryComponent ],
+      providers: [
+        { provide: Firestore, useValue: FirestoreStub },
+      ],
     })
     .compileComponents();
 
@@ -17,7 +23,7 @@ describe('TeamGalleryComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', inject([Firestore], (firestore: Firestore) => {
     expect(component).toBeTruthy();
-  });
+  }));
 });
