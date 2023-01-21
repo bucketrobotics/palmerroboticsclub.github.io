@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewsListComponent } from './news-list.component';
+import { Firestore } from '@angular/fire/firestore';
+
+const FirestoreStub = {};
 
 describe('NewsListComponent', () => {
   let component: NewsListComponent;
@@ -8,7 +11,10 @@ describe('NewsListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewsListComponent ]
+      declarations: [ NewsListComponent ],
+      providers: [
+        { provide: Firestore, useValue: FirestoreStub },
+      ],
     })
     .compileComponents();
 
@@ -17,7 +23,7 @@ describe('NewsListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', inject([Firestore], (firestore: Firestore) => {
     expect(component).toBeTruthy();
-  });
+  }));
 });
