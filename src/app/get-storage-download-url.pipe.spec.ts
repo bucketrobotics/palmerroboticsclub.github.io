@@ -3,13 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { inject, TestBed } from '@angular/core/testing';
 import { Storage } from '@angular/fire/storage';
 
+const StorageStub = {}
+
 describe('GetStorageDownloadURLPipe', () => {
   beforeEach(() => {
     TestBed
       .configureTestingModule({
         imports: [
           BrowserModule
-        ]
+        ],
+        providers: [
+          { provide: Storage, useValue: StorageStub },
+        ],
       });
   });
 
