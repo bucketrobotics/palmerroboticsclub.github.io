@@ -6,8 +6,6 @@ name: Build Angular App and Deploy to Firebase Hosting
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
