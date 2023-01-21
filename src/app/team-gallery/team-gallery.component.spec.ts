@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { inject, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TeamGalleryComponent } from './team-gallery.component';
 import { Firestore } from '@angular/fire/firestore';
