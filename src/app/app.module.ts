@@ -15,9 +15,10 @@ import { EventGeneralComponent } from './event-general/event-general.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
 import { TeamGalleryComponent } from './team-gallery/team-gallery.component';
 
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { getAnalytics, provideAnalytics, ScreenTrackingService } from '@angular/fire/analytics';
 import { environment } from '../environments/environment';
 import { GetStorageDownloadURLPipe } from './get-storage-download-url.pipe';
 import { PremiumSponsorsListComponent } from './premium-sponsors-list/premium-sponsors-list.component';
@@ -47,8 +48,11 @@ import { PremiumSponsorComponent } from './premium-sponsor/premium-sponsor.compo
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
+    provideAnalytics(() => getAnalytics()),
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
