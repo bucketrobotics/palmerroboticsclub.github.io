@@ -7,4 +7,9 @@ $theme-colors: (
     secondary: $blue-200
 );
 
+$font-family-sans-serif: Roboto;
+$font-family-serif:      Georgia;
+$font-family-monospace:  "Liberation Mono";
+$font-family-base:       $font-family-sans-serif !default;
+
 @import "node_modules/bootstrap/scss/bootstrap.scss";

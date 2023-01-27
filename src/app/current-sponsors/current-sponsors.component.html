@@ -6,21 +6,21 @@
             able continue to run and operate. We thank each and every sponsor!
         </div>
     </div>
-    <div class="row p-5 d-flex flex-row sponsor-container">
+    <div class="row p-5 d-flex flex-row flex-wrap justify-content-center">
         <div class="fs-2">Level 5 Sponsors</div>
-        <app-premium-sponsor *ngFor="let sponsor of sponsors5 | async" [name]="sponsor['name']" [path]="sponsor['path']"></app-premium-sponsor>
+        <app-premium-sponsor *ngFor="let sponsor of sponsors5 | async" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
     </div>
-    <div class="row p-5 d-flex flex-row sponsor-container">
+    <div class="row p-5 d-flex flex-row flex-wrap justify-content-center">
         <div class="fs-2">Level 4 Sponsors</div>
-        <app-premium-sponsor *ngFor="let sponsor of sponsors4 | async" [name]="sponsor['name']" [path]="sponsor['path']"></app-premium-sponsor>
+        <app-premium-sponsor *ngFor="let sponsor of sponsors4 | async" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
     </div>
-    <div class="row p-5 d-flex flex-row sponsor-container">
+    <div class="row p-5 d-flex flex-row flex-wrap justify-content-center">
         <div class="fs-2">Level 3 Sponsors</div>
-        <app-premium-sponsor *ngFor="let sponsor of sponsors3 | async" [name]="sponsor['name']" [path]="sponsor['path']"></app-premium-sponsor>
+        <app-premium-sponsor *ngFor="let sponsor of sponsors3 | async" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
     </div>
-    <div class="row p-5 d-flex flex-row sponsor-container">
+    <div class="row p-5 d-flex flex-row flex-wrap justify-content-center">
         <div class="fs-2">Level 2 Sponsors</div>
-        <app-premium-sponsor *ngFor="let sponsor of sponsors2 | async" [name]="sponsor['name']" [path]="sponsor['path']"></app-premium-sponsor>
+        <app-premium-sponsor *ngFor="let sponsor of sponsors2 | async" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
     </div>
     <div class="row p-5">
         <div class="fs-2">Level 1 Sponsors</div>
