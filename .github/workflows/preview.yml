@@ -25,13 +25,13 @@ jobs:
     - run: npx serve _site & sleep 5
     - uses: browser-actions/setup-chrome@v1
     - name: Screenshot 1920x1080
-      run: chrome --headless --disable-gpu --window-size "1920,1080" --screenshot localhost:3000 && mv screenshot.png screenshot_1920x1080.png
+      run: chrome --headless --disable-gpu --window-size="1920,1080" --screenshot localhost:3000 && mv screenshot.png screenshot_1920x1080.png
     - name: Screenshot 1366×768
-      run: chrome --headless --disable-gpu --window-size "1366,768" --screenshot localhost:3000 && mv screenshot.png screenshot_1366×768.png
+      run: chrome --headless --disable-gpu --window-size="1366,768" --screenshot localhost:3000 && mv screenshot.png screenshot_1366×768.png
     - name: Screenshot 360×640
-      run: chrome --headless --disable-gpu --window-size "360,640" --screenshot localhost:3000 && mv screenshot.png screenshot_360×640.png
+      run: chrome --headless --disable-gpu --window-size="360,640" --screenshot localhost:3000 && mv screenshot.png screenshot_360×640.png
     - name: Screenshot 414×896
-      run: chrome --headless --disable-gpu --window-size "414,896" --screenshot localhost:3000 && mv screenshot.png screenshot_414×896.png
+      run: chrome --headless --disable-gpu --window-size="414,896" --screenshot localhost:3000 && mv screenshot.png screenshot_414×896.png
     - name: Comment
       run: |
         curl \
