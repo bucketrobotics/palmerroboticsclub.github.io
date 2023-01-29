@@ -77,11 +77,13 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
-    - name: Download Build Artifact
-      uses: actions/download-artifact@v3.0.2
-      with:
-        name: build
-        path: _site
+    - run: npm ci
+    - run: npm run build -- --output-path _site
+#     - name: Download Build Artifact
+#       uses: actions/download-artifact@v3.0.2
+#       with:
+#         name: build
+#         path: _site
     - name: run Lighthouse CI
       run: |
         npm install -g @lhci/cli@0.8.x
