@@ -1,0 +1,42 @@
+# resolutions
+# 1920×1080 (9.94%)
+# 1366×768 (6.22%)
+# 360×640 (5.88%)
+# 414×896 (4.21%)
+
+name: Preview
+on:
+  issue_comment:                                     
+    types: [created, edited, deleted]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    if: contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '/preview')
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.3.0
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3.6.0
+      with:
+        node-version: 18.x
+    - run: npm ci
+    - run: npm run build -- --output-path _site
+    - run: npx serve _site & sleep 5
+    - name: Screenshot 1920x1080
+      run: chrome --headless --disable-gpu --window-size 1920,1080 --screenshot localhost:3000 && mv screenshot.png screenshot_1920x1080.png
+    - name: Screenshot 1366×768
+      run: chrome --headless --disable-gpu --window-size 1366,768 --screenshot localhost:3000 && mv screenshot.png screenshot_1366×768.png
+    - name: Screenshot 360×640
+      run: chrome --headless --disable-gpu --window-size 360,640 --screenshot localhost:3000 && mv screenshot.png screenshot_360×640.png
+    - name: Screenshot 414×896
+      run: chrome --headless --disable-gpu --window-size 414,896 --screenshot localhost:3000 && mv screenshot.png screenshot_414×896.png
+    - name: Comment
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github+json" \
+        -H "Authorization: Bearer <YOUR-TOKEN>"\
+        -H "X-GitHub-Api-Version: 2022-11-28" \
+        https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue }}/comments \
+        -d '{"body":"Test"}'
