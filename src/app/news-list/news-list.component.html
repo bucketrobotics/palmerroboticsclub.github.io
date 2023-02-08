@@ -1,5 +1,7 @@
 <div class="fluid-container">
-    <div class="p-5" *ngFor="let article of articles | async">
-        <app-news-article-card [article]="article"></app-news-article-card>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col" *ngFor="let article of articles | async">
+            <app-news-article-card [article]="article"></app-news-article-card>
+        </div>
     </div>
 </div>
