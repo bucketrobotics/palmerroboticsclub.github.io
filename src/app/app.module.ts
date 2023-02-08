@@ -22,6 +22,7 @@ import { environment } from '../environments/environment';
 import { GetStorageDownloadURLPipe } from './get-storage-download-url.pipe';
 import { PremiumSponsorsListComponent } from './premium-sponsors-list/premium-sponsors-list.component';
 import { PremiumSponsorComponent } from './premium-sponsor/premium-sponsor.component';
+import { NewsArticleCardComponent } from './news-article-card/news-article-card.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { PremiumSponsorComponent } from './premium-sponsor/premium-sponsor.compo
     GetStorageDownloadURLPipe,
     PremiumSponsorsListComponent,
     PremiumSponsorComponent,
+    NewsArticleCardComponent,
   ],
   imports: [
     BrowserModule,
