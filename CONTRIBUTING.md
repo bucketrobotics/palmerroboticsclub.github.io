@@ -45,6 +45,14 @@ Scan through our [existing issues](https://github.com/bucketrobotics/palmerrobot
 
 Commit the changes once you are happy with them.
 
+The format for messages is follows: "{COMPONENT_NAME}: {WHAT YOU DID HERE}"
+
+Examples of components:
+- index
+- contact-us
+
+If not page, name it with what it does, example "routing"
+
 ### Pull Request
 
 When you're finished with the changes, create a pull request, also known as a PR.
