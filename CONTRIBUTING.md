@@ -56,3 +56,5 @@ When you're finished with the changes, create a pull request, also known as a PR
 When you're satisfied with your changes, you can merge them!
 - Make sure your code passes the Angular Build check first, so it build correctly
 - If you're not sure if your change is good, reqest people to review it!
+
+Once it have been merged, please delete your branch
