@@ -40,6 +40,9 @@ Scan through our [existing issues](https://github.com/bucketrobotics/palmerrobot
 4. Run npm start to start the development server
 
 5. Create a working branch and start with your changes!
+- Name it properly
+- People should be able to tell what it does a first glance
+- Failure to do so may lead to deletion without warning
 
 ### Commit your update
 
