@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { NavigationStart, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'palmerroboticsclub';
-  @ViewChild('navbarToggler') navbarToggler!:ElementRef;
+  @ViewChild('navbar') navbar!:ElementRef;
 
   constructor(private router: Router) {}
 
@@ -17,9 +18,8 @@ export class AppComponent {
       // Filter the event type
       if (val instanceof NavigationStart) {
         // Hide the navbar
-        this.navbarToggler.nativeElement.click();
-        // Debug log
-        console.log('NavBar closed');
+        let collapse = bootstrap.Collapse.getOrCreateInstance(this.navbar.nativeElement);
+        collapse.hide();
       }
     });
   }
