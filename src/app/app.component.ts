@@ -18,7 +18,7 @@ export class AppComponent {
       // Filter the event type
       if (val instanceof NavigationStart) {
         // Hide the navbar
-        let collapse = bootstrap.Collapse.getOrCreateInstance(this.navbar.nativeElement);
+        let collapse = new bootstrap.Collapse(this.navbar.nativeElement, { toggle: false });
         collapse.hide();
       }
     });
