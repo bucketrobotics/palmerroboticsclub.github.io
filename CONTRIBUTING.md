@@ -6,6 +6,10 @@ In this guide you will get an overview of the contribution workflow from opening
 
 Use the table of contents icon  on the top left corner of this document to get to a specific section of this guide quickly.
 
+## Rules
+- Do not assign issues to other people
+- Name things appropritatly, spell things to the best of your ability. Failure to do so may lead to removal without warning.
+
 ## Getting Started
 
 ### New contributor guide
