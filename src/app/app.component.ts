@@ -9,7 +9,7 @@ import * as bootstrap from 'bootstrap';
 })
 export class AppComponent {
   title = 'palmerroboticsclub';
-  @ViewChild('navbar') navbar!:ElementRef;
+  @ViewChild('navbarButton') navbar!:ElementRef;
 
   constructor(private router: Router) {}
 
@@ -18,8 +18,9 @@ export class AppComponent {
       // Filter the event type
       if (val instanceof NavigationStart) {
         // Hide the navbar
-        let collapse = new bootstrap.Collapse(this.navbar.nativeElement, { toggle: false });
-        collapse.hide();
+        if (this.navbar.nativeElement.getAttribute('aria-expanded') == "true") {
+          this.navbar.nativeElement.click();
+        }
       }
     });
   }
