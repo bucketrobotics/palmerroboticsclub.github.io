@@ -15,6 +15,6 @@ export class NewsArticleService {
   get(id: string): Observable<DocumentData> {
     const ref = doc(this.firestore, `news-articles/${id}`);
     console.log("getting " + id);
-    return docData(ref);
+    return docData(ref, {"idField":"id"});
   }
 }
