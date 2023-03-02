@@ -10,7 +10,7 @@
                 <br>
                 <img [src]="('news/' + article['id'] + '/cover.jpg') | getStorageDownloadURL | async" class="img-fluid w-75 d-block mx-auto" alt="">
                 <br>
-                <div class="fs-4 m-5">{{article["description"].replace("\\n", "<br>")}}</div>
+                <div class="fs-4 m-5" [innerHTML]="article['description']"></div>
             </div>
             <div class="col-md-1"></div>
         </div>
