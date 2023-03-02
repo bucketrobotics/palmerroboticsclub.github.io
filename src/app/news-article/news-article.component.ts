@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class NewsArticleComponent {
   article!: DocumentData;
+  exists: boolean = false;
   route: ActivatedRoute;
 
   constructor(activatedRoute: ActivatedRoute) {
@@ -18,6 +19,8 @@ export class NewsArticleComponent {
 
   ngOnInit() {
     this.route.data.subscribe(({ article }) => {
+      this.exists = article !== undefined;
+      console.log(this.exists);
       this.article = article;
     })
   }
