@@ -1,13 +1,13 @@
 <div class="fluid-container">
     <div class="row p-5">
         <div class="fs-2">Gallery</div>
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel" class="carousel slide">
             <div class="carousel-indicators">
-                <button *ngFor="let image of gallery | async; let i = index" type="button" data-bs-target="#carousel" [attr.data-bs-slide-to]="i" class="active"
+                <button *ngFor="let image of gallery | async; let i = index" type="button" data-bs-target="#carousel" [attr.data-bs-slide-to]="i" [class.active]="i == 0"
                     aria-current="true" [attr.aria-label]="image['label']"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" *ngFor="let image of gallery | async">
+                <div class="carousel-item" [class.active]="i == 0" *ngFor="let image of gallery | async; let i = index">
                     <img [src]="image['image'] | getStorageDownloadURL | async" [alt]="image['label']" class="w-100 d-block object-fit-cover">
                     <div class="carousel-caption d-none d-md-block">
                         <div class="fs-2">{{image['label']}}</div>
