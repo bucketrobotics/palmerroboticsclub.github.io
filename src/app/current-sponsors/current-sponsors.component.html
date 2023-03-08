@@ -8,24 +8,34 @@
     </div>
     <div class="row p-5 d-flex flex-row flex-wrap justify-content-center">
         <div class="fs-2">Level 5 Sponsors</div>
-        <app-premium-sponsor *ngFor="let sponsor of sponsors5 | async" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
+        <ng-container *ngFor="let sponsor of sponsors | async">
+            <app-premium-sponsor *ngIf="sponsor['level'] == 5" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
+        </ng-container>
     </div>
     <div class="row p-5 d-flex flex-row flex-wrap justify-content-center">
         <div class="fs-2">Level 4 Sponsors</div>
-        <app-premium-sponsor *ngFor="let sponsor of sponsors4 | async" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
+        <ng-container *ngFor="let sponsor of sponsors | async">
+            <app-premium-sponsor *ngIf="sponsor['level'] == 4" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
+        </ng-container>
     </div>
     <div class="row p-5 d-flex flex-row flex-wrap justify-content-center">
         <div class="fs-2">Level 3 Sponsors</div>
-        <app-premium-sponsor *ngFor="let sponsor of sponsors3 | async" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
+        <ng-container *ngFor="let sponsor of sponsors | async">
+            <app-premium-sponsor *ngIf="sponsor['level'] == 3" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
+        </ng-container>
     </div>
     <div class="row p-5 d-flex flex-row flex-wrap justify-content-center">
         <div class="fs-2">Level 2 Sponsors</div>
-        <app-premium-sponsor *ngFor="let sponsor of sponsors2 | async" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
+        <ng-container *ngFor="let sponsor of sponsors | async">
+            <app-premium-sponsor *ngIf="sponsor['level'] == 2" [name]="sponsor['name']" [path]="sponsor['path']" [url]="sponsor['url']" class="w-auto"></app-premium-sponsor>
+        </ng-container>
     </div>
     <div class="row p-5">
         <div class="fs-2">Level 1 Sponsors</div>
         <ul class="ms-5">
-            <li class="fs-4" *ngFor="let sponsor of sponsors1 | async">{{ sponsor['name'] }}</li>
+            <ng-container *ngFor="let sponsor of sponsors | async">
+                <li class="fs-4" *ngIf="sponsor['level'] == 1">{{ sponsor['name'] }}</li>
+            </ng-container>
         </ul>
     </div>
 </div>
