@@ -2,7 +2,7 @@
 name: Writing request
 about: Suggest improvment to writing on our website
 title: ''
-labels: enhancement writing
+labels: ["enhancement","writing"]
 assignees: ''
 
 ---
