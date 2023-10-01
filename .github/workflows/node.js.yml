@@ -22,7 +22,7 @@ jobs:
         node-version: 18.x
         cache: 'npm'
     - run: npm ci
-    - run: npm run build -- --output-path _site
+    - run: npm run build -- --output-path _site --configuration production
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
