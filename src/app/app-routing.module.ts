@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { RouterModule, RouterStateSnapshot, Routes, TitleStrategy } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { CurrentSponsorsComponent } from './current-sponsors/current-sponsors.component';
-import { FtcComponent } from './ftc/ftc.component';
+import { VexComponent } from './vex/vex.component';
 import { IndexComponent } from './index/index.component';
 import { NewsArticleResolver } from './news-article.resolver';
 import { NewsArticleComponent } from './news-article/news-article.component';
@@ -54,9 +54,9 @@ const routes: Routes = [
     title: "Current Sponsors"
   },
   {
-    path: "ftc",
-    component: FtcComponent,
-    title: "First Tech Challenge"
+    path: "vex",
+    component: VexComponent,
+    title: "Vex V5"
   },
   {
     path: "events",

@@ -9,7 +9,7 @@ import { NewsArticleComponent } from './news-article/news-article.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { SupportUsComponent } from './support-us/support-us.component';
 import { CurrentSponsorsComponent } from './current-sponsors/current-sponsors.component';
-import { FtcComponent } from './ftc/ftc.component';
+import { VexComponent } from './vex/vex.component';
 import { EventOutreachComponent } from './event-outreach/event-outreach.component';
 import { EventGeneralComponent } from './event-general/event-general.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
@@ -33,7 +33,7 @@ import { NewsArticleCardComponent } from './news-article-card/news-article-card.
     NewsListComponent,
     SupportUsComponent,
     CurrentSponsorsComponent,
-    FtcComponent,
+    VexComponent,
     EventOutreachComponent,
     EventGeneralComponent,
     TeamMembersComponent,
